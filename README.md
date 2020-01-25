@@ -15,7 +15,7 @@ Fibonacci commandline app in Rust.
     ### or just use cargo
     $ cargo run
     ### run with debug logging
-    $ RUST_FMT=debug ./target/release/fibs 15
+    $ RUST_LOG=debug ./target/release/fibs 15
 ```
 
 ## Test
