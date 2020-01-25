@@ -34,7 +34,10 @@ fn get_prog_name() -> String {
 fn fib(n: u32) -> u128 {
     let mut a = 0;
     let mut b = 1;
-    for _ in 0..n {
+    for i in 0..n {
+        if b < a {
+            panic!("overflow: i={} a={} b={}", i, a, b);
+        }
         debug!("{}", a);
         let t = b;
         b = a + b;
