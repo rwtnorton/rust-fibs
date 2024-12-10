@@ -6,9 +6,8 @@ extern crate log;
 fn main() {
     pretty_env_logger::init();
     let vs: Vec<_> = std::env::args().skip(1).collect();
-    let prog_name = get_prog_name();
     if vs.len() != 1 {
-        eprintln!("Usage: {} n", prog_name);
+        eprintln!("Usage: {} n", get_prog_name());
         std::process::exit(1);
     }
     let n: u32 = match vs[0].parse() {
